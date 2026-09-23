@@ -79,7 +79,7 @@
 启动后按提示填写：
 
 1. Token
-2. 表格链接（脚本会自动抽出 token）。例：`https://xxx.feishu.cn/sheets/P7YDsNAKDhhmcKtwRuEceqiDnoe`
+2. 表格链接（脚本会自动抽出 token）。例：`https://xxx.feishu.cn/sheets/P7YDsNAKDhhmcKtwRuEceq12345`
 3. 保存目录（请填完整路径，如 `D:\user\下载\人设图`；回车则保存在脚本旁的 `feishu_images`）
 4. 工作表（`1,3` 或回车=全部）
 5. 图片列（如 `H,I`）
@@ -123,8 +123,8 @@
 | `python` / `pip` 不是内部命令 | 没装 Python，或没用 PATH | 从 python.org 安装并勾选 Add to PATH；用 `py` 启动 |
 | `python xxx.py` 无输出 | 指向商店占位 `WindowsApps\python.exe` | 关掉「应用执行别名」里的 python.exe，重装官方 Python |
 | 找不到 `.py` 文件 | 记事本存成了 `.txt` | 资源管理器勾选「文件扩展名」，改名为 `.py` |
-| `99991672 No permission` | 用了 `t-` Token，或应用没有编辑权限 | 改用 `u-`；应用开通编辑表格并发布后重新取 Token |
-| `90221 data exceeded 10485760 bytes` | 一次读的范围太大 | 脚本已自动拆分；若仍出现会再对半切 |
+| `99991612 No permission` | 用了 `t-` Token，或应用没有编辑权限 | 改用 `u-`；应用开通编辑表格并发布后重新取 Token |
+| `90212 data exceeded 10485760 bytes` | 一次读的范围太大 | 脚本已自动拆分；若仍出现会再对半切 |
 | 回传全部 400，body 不对 | 旧版脚本把图当成 base64 | 请用整合版（`image` 为字节数组） |
 | 搜协作者找不到应用 | 应用未发布/未安装到组织 | 回传不必加应用为协作者，用 `u-` 即可 |
 | 大图回传失败 / 很慢 | JSON 传字节数组体积膨胀 | 转 JPG、保持文件名再传 |
